@@ -1,11 +1,16 @@
 #include<iostream>
 using namespace std;
 
+//Write a macro program that takes a numberand converts it into binary code
+
 int main()
 {
-	int a = 13, b = a, x = 0;
+	int a = 0, b = a, x = 0;
 	int count = 0, size = 0;
-	
+
+	cout << "\n Enter value: ";
+	cin >> a;
+
 	while (b)
 	{
 		b /= 2;
