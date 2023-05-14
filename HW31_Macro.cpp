@@ -4,18 +4,16 @@ using namespace std;
 
 //Write a macro program that takes a numberand converts it into binary code
 
-#define BINARY(a) (int x = 0, temp = 0, d = 1;\
-while(a) { \
-	temp = a % 2;\
-	temp *= d;\
-	x += temp;\
-	\
-	a /= 2;\
-	d *= 10; \
-}\
-return x;\
-)
-
+#define BINARY(a) \
+    int i = 0, binary = 0, temp = 0, d = 1; \
+    while (a) { \
+	temp = a % 2; \
+	temp *= d; \
+        binary += temp; \
+        a /= 2; \
+		d *= 10; \
+    } \
+cout << binary << endl;
 
 int checkV()
 {
@@ -41,26 +39,25 @@ int checkV()
 
 int main()
 {
-	int value = 0, binary = 0;
-
+	int value = 0, bin = 0;
 	cout << "\n    Enter int value: ";
 	value = checkV();
 
 	if (value == 0)
 	{
-		binary = 0;
-		goto end;
+		bin = 0;
+		cout << "\n\tBinary code: " << bin << endl;
+		return 0;
 	}
 
 	if (value == 1)
 	{
-		binary = 0;
-		goto end;
+		bin = 0;
+		cout << "\n\tBinary code: " << bin << endl;
+		return 0;
 	}
-
-	//binary = BINARY(value);
-end:
-	cout << "\n\tBinary code: " << binary << endl;
 	
+	BINARY(value);
+
 	return 0;
 }
