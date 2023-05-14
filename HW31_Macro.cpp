@@ -17,6 +17,7 @@ cout << binary << endl;
 
 int checkV()
 {
+	
 	int a;
 	while (true) // the cycle continues until the user enters the correct value
 	{
