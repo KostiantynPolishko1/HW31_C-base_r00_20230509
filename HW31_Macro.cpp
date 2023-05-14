@@ -13,7 +13,7 @@ using namespace std;
         a /= 2; \
 		d *= 10; \
     } \
-cout << binary << endl;
+cout << "\n\tBinary code: " << binary << endl;
 
 int checkV()
 {
